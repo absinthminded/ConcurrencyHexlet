@@ -1,6 +1,4 @@
-package excersices.forM0e2.victims;
-
-import java.util.stream.*;
+package excersices.forM0e1.victims;
 
 public class SumThread extends Thread{
 

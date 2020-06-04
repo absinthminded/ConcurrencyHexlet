@@ -1,4 +1,4 @@
-package excersices.forM0e2.victims;
+package excersices.forM0e1.victims;
 
 public class ThreadCaller {
     // BEGIN (write your solution here)

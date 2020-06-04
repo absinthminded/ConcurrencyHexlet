@@ -1,6 +1,4 @@
-package excersices.forM0e3;
-
-import java.util.stream.*;
+package excersices.forM0e2;
 
 
 public class MaxRunnable implements Runnable {
