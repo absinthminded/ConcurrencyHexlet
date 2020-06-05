@@ -5,18 +5,21 @@ import java.util.concurrent.*;
 
 public class ThreadHelper {
 
-    public static final ExecutorService EXECUTOR_SERVICE = Executors.newCachedThreadPool();
+    public static final ExecutorService EXECUTOR_SERVICE = Executors.newWorkStealingPool();
     // BEGIN (write your solution here) Какой сервис вы создадите и присвоите ссылке выше?
 
     // END
 
     public static long fib(final long numberToCalculate) throws Exception {
         // BEGIN (write your solution here)
-        {
+/*
             if (numberToCalculate <= 1)
                 return numberToCalculate;
-            return fib(numberToCalculate-1) + fib(numberToCalculate-2);
-        }
+            return fib(numberToCalculate-1) + fib(numberToCalculate-2);*/
+        final FibCalculator fibCalculator = new FibCalculator(numberToCalculate);
+        final Future f = EXECUTOR_SERVICE.submit(fibCalculator);
+        f.get();
+        return fibCalculator.getResult();
         // END
     }
 
