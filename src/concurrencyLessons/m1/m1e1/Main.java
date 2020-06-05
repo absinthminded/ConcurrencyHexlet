@@ -1,10 +1,8 @@
-package concurrencyLessons.m1.m1e0;
+package concurrencyLessons.m1.m1e1;
 
 import concurrencyLessons.m0.m0e2.GraphNode;
 import concurrencyLessons.m0.m0e2.XOfield;
 import concurrencyLessons.m0.m0e3.GraphHelper;
-
-
 
 public class Main {
 
@@ -14,3 +12,4 @@ public class Main {
         System.out.println(GraphHelper.countNodes(root));
     }
 }
+
